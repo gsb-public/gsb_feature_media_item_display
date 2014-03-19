@@ -114,11 +114,11 @@ function gsb_feature_media_item_display_views_default_views() {
       ),
     ),
   );
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Publication Date (field_date) */
+  $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
+  $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
+  $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
+  $handler->display->display_options['sorts']['field_date_value']['order'] = 'DESC';
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -146,7 +146,37 @@ function gsb_feature_media_item_display_views_default_views() {
 
   /* Display: EVA Field */
   $handler = $view->new_display('entity_view', 'EVA Field', 'media_mention_listing_entity_view');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'In the Media';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'show-more-less show-more-less-num-5 show-more-less-min-8';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Icon */
+  $handler->display->display_options['fields']['field_icon']['id'] = 'field_icon';
+  $handler->display->display_options['fields']['field_icon']['table'] = 'field_data_field_icon';
+  $handler->display->display_options['fields']['field_icon']['field'] = 'field_icon';
+  $handler->display->display_options['fields']['field_icon']['label'] = '';
+  $handler->display->display_options['fields']['field_icon']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_icon']['alter']['text'] = '<span class="[field_icon]"></span>';
+  $handler->display->display_options['fields']['field_icon']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_icon']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_icon']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_icon']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_icon']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_icon']['type'] = 'list_key';
+  $handler->display->display_options['fields']['field_icon']['settings'] = array(
+    'conditions' => array(
+      0 => array(
+        'condition' => '',
+      ),
+    ),
+  );
   /* Field: Link to article URL */
   $handler->display->display_options['fields']['field_link_single']['id'] = 'field_link_single';
   $handler->display->display_options['fields']['field_link_single']['table'] = 'field_data_field_link_single';
@@ -181,9 +211,10 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['field_pub_book_title']['table'] = 'field_data_field_pub_book_title';
   $handler->display->display_options['fields']['field_pub_book_title']['field'] = 'field_pub_book_title';
   $handler->display->display_options['fields']['field_pub_book_title']['label'] = '';
-  $handler->display->display_options['fields']['field_pub_book_title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_pub_book_title']['alter']['text'] = '[field_pub_book_title], ';
+  $handler->display->display_options['fields']['field_pub_book_title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_pub_book_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pub_book_title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_pub_book_title']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_pub_book_title']['settings'] = array(
     'conditions' => array(
       0 => array(
@@ -196,7 +227,10 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['label'] = '';
+  $handler->display->display_options['fields']['field_date']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_date']['alter']['text'] = '<em>[field_pub_book_title]</em>, [field_date]';
   $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_date']['settings'] = array(
     'format_type' => 'panopoly_day',
     'fromto' => 'both',
