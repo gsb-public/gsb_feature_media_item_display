@@ -67,7 +67,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Source Publication / Book Title */
+  /* Field: Content: Source Publication */
   $handler->display->display_options['fields']['field_pub_book_title']['id'] = 'field_pub_book_title';
   $handler->display->display_options['fields']['field_pub_book_title']['table'] = 'field_data_field_pub_book_title';
   $handler->display->display_options['fields']['field_pub_book_title']['field'] = 'field_pub_book_title';
@@ -76,25 +76,6 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['field_pub_book_title']['alter']['text'] = '[field_pub_book_title], ';
   $handler->display->display_options['fields']['field_pub_book_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_pub_book_title']['settings'] = array(
-    'conditions' => array(
-      0 => array(
-        'condition' => '',
-      ),
-    ),
-  );
-  /* Field: Content: Publication Date */
-  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
-  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
-  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
-  $handler->display->display_options['fields']['field_date']['label'] = '';
-  $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_date']['settings'] = array(
-    'format_type' => 'panopoly_day',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'show',
     'conditions' => array(
       0 => array(
         'condition' => '',
@@ -114,11 +95,21 @@ function gsb_feature_media_item_display_views_default_views() {
       ),
     ),
   );
-  /* Sort criterion: Content: Publication Date (field_date) */
-  $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
-  $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
-  $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
-  $handler->display->display_options['sorts']['field_date_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Year (field_year_of_publication) */
+  $handler->display->display_options['sorts']['field_year_of_publication_value']['id'] = 'field_year_of_publication_value';
+  $handler->display->display_options['sorts']['field_year_of_publication_value']['table'] = 'field_data_field_year_of_publication';
+  $handler->display->display_options['sorts']['field_year_of_publication_value']['field'] = 'field_year_of_publication_value';
+  $handler->display->display_options['sorts']['field_year_of_publication_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Month (field_month) */
+  $handler->display->display_options['sorts']['field_month_value']['id'] = 'field_month_value';
+  $handler->display->display_options['sorts']['field_month_value']['table'] = 'field_data_field_month';
+  $handler->display->display_options['sorts']['field_month_value']['field'] = 'field_month_value';
+  $handler->display->display_options['sorts']['field_month_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Day (field_pub_date_day) */
+  $handler->display->display_options['sorts']['field_pub_date_day_value']['id'] = 'field_pub_date_day_value';
+  $handler->display->display_options['sorts']['field_pub_date_day_value']['table'] = 'field_data_field_pub_date_day';
+  $handler->display->display_options['sorts']['field_pub_date_day_value']['field'] = 'field_pub_date_day_value';
+  $handler->display->display_options['sorts']['field_pub_date_day_value']['order'] = 'DESC';
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -209,7 +200,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Source Publication / Book Title */
+  /* Field: Content: Source Publication */
   $handler->display->display_options['fields']['field_pub_book_title']['id'] = 'field_pub_book_title';
   $handler->display->display_options['fields']['field_pub_book_title']['table'] = 'field_data_field_pub_book_title';
   $handler->display->display_options['fields']['field_pub_book_title']['field'] = 'field_pub_book_title';
@@ -225,28 +216,6 @@ function gsb_feature_media_item_display_views_default_views() {
       ),
     ),
   );
-  /* Field: Content: Publication Date */
-  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
-  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
-  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
-  $handler->display->display_options['fields']['field_date']['label'] = '';
-  $handler->display->display_options['fields']['field_date']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_date']['alter']['text'] = '<em>[field_pub_book_title]</em>, [field_date]';
-  $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_date']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_date']['settings'] = array(
-    'format_type' => 'panopoly_day',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'show',
-    'conditions' => array(
-      0 => array(
-        'condition' => '',
-      ),
-    ),
-  );
   /* Field: Field: Editorial Summary */
   $handler->display->display_options['fields']['field_editorial_summary']['id'] = 'field_editorial_summary';
   $handler->display->display_options['fields']['field_editorial_summary']['table'] = 'field_data_field_editorial_summary';
@@ -254,6 +223,59 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['field_editorial_summary']['label'] = '';
   $handler->display->display_options['fields']['field_editorial_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_editorial_summary']['settings'] = array(
+    'conditions' => array(
+      0 => array(
+        'condition' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Month */
+  $handler->display->display_options['fields']['field_month']['id'] = 'field_month';
+  $handler->display->display_options['fields']['field_month']['table'] = 'field_data_field_month';
+  $handler->display->display_options['fields']['field_month']['field'] = 'field_month';
+  $handler->display->display_options['fields']['field_month']['label'] = '';
+  $handler->display->display_options['fields']['field_month']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_month']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_month']['settings'] = array(
+    'conditions' => array(
+      0 => array(
+        'condition' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Day */
+  $handler->display->display_options['fields']['field_pub_date_day']['id'] = 'field_pub_date_day';
+  $handler->display->display_options['fields']['field_pub_date_day']['table'] = 'field_data_field_pub_date_day';
+  $handler->display->display_options['fields']['field_pub_date_day']['field'] = 'field_pub_date_day';
+  $handler->display->display_options['fields']['field_pub_date_day']['label'] = '';
+  $handler->display->display_options['fields']['field_pub_date_day']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_pub_date_day']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_pub_date_day']['alter']['text'] = '[field_pub_date_day],';
+  $handler->display->display_options['fields']['field_pub_date_day']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pub_date_day']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+    'conditions' => array(
+      0 => array(
+        'condition' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Year */
+  $handler->display->display_options['fields']['field_year_of_publication']['id'] = 'field_year_of_publication';
+  $handler->display->display_options['fields']['field_year_of_publication']['table'] = 'field_data_field_year_of_publication';
+  $handler->display->display_options['fields']['field_year_of_publication']['field'] = 'field_year_of_publication';
+  $handler->display->display_options['fields']['field_year_of_publication']['label'] = '';
+  $handler->display->display_options['fields']['field_year_of_publication']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_year_of_publication']['alter']['text'] = '<em>[field_pub_book_title]</em>, [field_month] [field_pub_date_day] [field_year_of_publication]';
+  $handler->display->display_options['fields']['field_year_of_publication']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_year_of_publication']['settings'] = array(
+    'format_type' => 'year',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
     'conditions' => array(
       0 => array(
         'condition' => '',
@@ -276,6 +298,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'media_item' => 'media_item',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Field: Profile Visibility (field_profile_visibility) */
   $handler->display->display_options['filters']['field_profile_visibility_value']['id'] = 'field_profile_visibility_value';
   $handler->display->display_options['filters']['field_profile_visibility_value']['table'] = 'field_data_field_profile_visibility';
@@ -284,6 +307,7 @@ function gsb_feature_media_item_display_views_default_views() {
     1 => '1',
     2 => '2',
   );
+  $handler->display->display_options['filters']['field_profile_visibility_value']['group'] = 1;
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'faculty',
@@ -366,7 +390,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Publication Date */
+  /* Field: : field_date */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
