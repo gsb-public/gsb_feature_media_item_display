@@ -367,7 +367,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['header']['gsb_node_modal_add_link']['table'] = 'gsb__global';
   $handler->display->display_options['header']['gsb_node_modal_add_link']['field'] = 'gsb_node_modal_add_link';
   $handler->display->display_options['header']['gsb_node_modal_add_link']['bundle'] = 'media_item';
-  $handler->display->display_options['header']['gsb_node_modal_add_link']['text'] = 'Create a Media Item';
+  $handler->display->display_options['header']['gsb_node_modal_add_link']['text'] = 'Create a new media item';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Unfiltered text */
   $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
