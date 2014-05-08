@@ -151,7 +151,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Icon */
+  /* Field: Content: Media format */
   $handler->display->display_options['fields']['field_icon']['id'] = 'field_icon';
   $handler->display->display_options['fields']['field_icon']['table'] = 'field_data_field_icon';
   $handler->display->display_options['fields']['field_icon']['field'] = 'field_icon';
@@ -216,19 +216,6 @@ function gsb_feature_media_item_display_views_default_views() {
       ),
     ),
   );
-  /* Field: Field: Editorial Summary */
-  $handler->display->display_options['fields']['field_editorial_summary']['id'] = 'field_editorial_summary';
-  $handler->display->display_options['fields']['field_editorial_summary']['table'] = 'field_data_field_editorial_summary';
-  $handler->display->display_options['fields']['field_editorial_summary']['field'] = 'field_editorial_summary';
-  $handler->display->display_options['fields']['field_editorial_summary']['label'] = '';
-  $handler->display->display_options['fields']['field_editorial_summary']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_editorial_summary']['settings'] = array(
-    'conditions' => array(
-      0 => array(
-        'condition' => '',
-      ),
-    ),
-  );
   /* Field: Content: Month */
   $handler->display->display_options['fields']['field_month']['id'] = 'field_month';
   $handler->display->display_options['fields']['field_month']['table'] = 'field_data_field_month';
@@ -282,6 +269,19 @@ function gsb_feature_media_item_display_views_default_views() {
       ),
     ),
   );
+  /* Field: Field: Editorial Summary */
+  $handler->display->display_options['fields']['field_editorial_summary']['id'] = 'field_editorial_summary';
+  $handler->display->display_options['fields']['field_editorial_summary']['table'] = 'field_data_field_editorial_summary';
+  $handler->display->display_options['fields']['field_editorial_summary']['field'] = 'field_editorial_summary';
+  $handler->display->display_options['fields']['field_editorial_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_editorial_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_editorial_summary']['settings'] = array(
+    'conditions' => array(
+      0 => array(
+        'condition' => '',
+      ),
+    ),
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -299,7 +299,7 @@ function gsb_feature_media_item_display_views_default_views() {
     'media_item' => 'media_item',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Field: Profile Visibility (field_profile_visibility) */
+  /* Filter criterion: Field: Display on Profile (field_profile_visibility) */
   $handler->display->display_options['filters']['field_profile_visibility_value']['id'] = 'field_profile_visibility_value';
   $handler->display->display_options['filters']['field_profile_visibility_value']['table'] = 'field_data_field_profile_visibility';
   $handler->display->display_options['filters']['field_profile_visibility_value']['field'] = 'field_profile_visibility_value';
@@ -404,7 +404,7 @@ function gsb_feature_media_item_display_views_default_views() {
       ),
     ),
   );
-  /* Field: Field: Profile Visibility */
+  /* Field: Field: Display on Profile */
   $handler->display->display_options['fields']['field_profile_visibility']['id'] = 'field_profile_visibility';
   $handler->display->display_options['fields']['field_profile_visibility']['table'] = 'field_data_field_profile_visibility';
   $handler->display->display_options['fields']['field_profile_visibility']['field'] = 'field_profile_visibility';
