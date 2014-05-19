@@ -327,6 +327,7 @@ function gsb_feature_media_item_display_views_default_views() {
     'field_date' => 'field_date',
     'field_profile_visibility' => 'field_profile_visibility',
     'edit_node_modal' => 'edit_node_modal',
+    'delete_node_modal' => 'delete_node_modal',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -352,6 +353,11 @@ function gsb_feature_media_item_display_views_default_views() {
       'empty_column' => 0,
     ),
     'edit_node_modal' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'delete_node_modal' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -422,6 +428,12 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['edit_node_modal']['field'] = 'edit_node_modal';
   $handler->display->display_options['fields']['edit_node_modal']['label'] = '';
   $handler->display->display_options['fields']['edit_node_modal']['element_label_colon'] = FALSE;
+  /* Field: Content: Delete link (in modal) */
+  $handler->display->display_options['fields']['delete_node_modal']['id'] = 'delete_node_modal';
+  $handler->display->display_options['fields']['delete_node_modal']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['delete_node_modal']['field'] = 'delete_node_modal';
+  $handler->display->display_options['fields']['delete_node_modal']['label'] = '';
+  $handler->display->display_options['fields']['delete_node_modal']['element_label_colon'] = FALSE;
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'faculty',
