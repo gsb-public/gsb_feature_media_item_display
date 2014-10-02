@@ -1,9 +1,12 @@
 name = GSB Feature Media Item Display
 core = 7.x
 package = GSB
+version = 7.x-4.01
+project = gsb_feature_media_item_display
 dependencies[] = eva
 dependencies[] = gsb_feature_media_item_ct
 dependencies[] = views
+datestamp = 1412197640
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = gsb_media_mentions

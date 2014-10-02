@@ -82,7 +82,7 @@ function gsb_feature_media_item_display_views_default_views() {
       ),
     ),
   );
-  /* Field: Field: Editorial Summary */
+  /* Field: Field: Dek */
   $handler->display->display_options['fields']['field_editorial_summary']['id'] = 'field_editorial_summary';
   $handler->display->display_options['fields']['field_editorial_summary']['table'] = 'field_data_field_editorial_summary';
   $handler->display->display_options['fields']['field_editorial_summary']['field'] = 'field_editorial_summary';
@@ -140,7 +140,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'In the Media';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'show-more-less show-more-less-num-5 show-more-less-min-8';
+  $handler->display->display_options['css_class'] = 'show-more-less show-more-less-num-3 show-more-less-min-5';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -151,7 +151,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Media format */
+  /* Field: Content: Media Format */
   $handler->display->display_options['fields']['field_icon']['id'] = 'field_icon';
   $handler->display->display_options['fields']['field_icon']['table'] = 'field_data_field_icon';
   $handler->display->display_options['fields']['field_icon']['field'] = 'field_icon';
@@ -269,7 +269,7 @@ function gsb_feature_media_item_display_views_default_views() {
       ),
     ),
   );
-  /* Field: Field: Editorial Summary */
+  /* Field: Field: Dek */
   $handler->display->display_options['fields']['field_editorial_summary']['id'] = 'field_editorial_summary';
   $handler->display->display_options['fields']['field_editorial_summary']['table'] = 'field_data_field_editorial_summary';
   $handler->display->display_options['fields']['field_editorial_summary']['field'] = 'field_editorial_summary';
@@ -392,7 +392,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: : field_date */
+  /* Field: Content: Source Publication Date */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
