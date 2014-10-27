@@ -324,7 +324,7 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
-    'field_date' => 'field_date',
+    'field_year_of_publication' => 'field_year_of_publication',
     'field_profile_visibility' => 'field_profile_visibility',
     'edit_node_modal' => 'edit_node_modal',
     'delete_node_modal' => 'delete_node_modal',
@@ -338,7 +338,7 @@ function gsb_feature_media_item_display_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_date' => array(
+    'field_year_of_publication' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -392,13 +392,14 @@ function gsb_feature_media_item_display_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Source Publication Date */
-  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
-  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
-  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
-  $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_date']['settings'] = array(
-    'format_type' => 'panopoly_day',
+  /* Field: Content: Year */
+  $handler->display->display_options['fields']['field_year_of_publication']['id'] = 'field_year_of_publication';
+  $handler->display->display_options['fields']['field_year_of_publication']['table'] = 'field_data_field_year_of_publication';
+  $handler->display->display_options['fields']['field_year_of_publication']['field'] = 'field_year_of_publication';
+  $handler->display->display_options['fields']['field_year_of_publication']['label'] = 'Source Publication Year';
+  $handler->display->display_options['fields']['field_year_of_publication']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_year_of_publication']['settings'] = array(
+    'format_type' => 'year',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
